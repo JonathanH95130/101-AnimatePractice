@@ -4,23 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-  <link rel="stylesheet" href="style.css"/>
-  <script src="index.js"></script>
+  <link rel="stylesheet" href="test.css"/>
+  <script src="test.js"></script>
   <title>JS & DOM Practice</title>
 </head>
 <body>
   <main class="main">
     <h2>Read the <a href="https://github.com/daneden/animate.css/">Animate.css</a> docs for valid inputs.</h2>
-    <form>
-      <label for="animation-name">Animation Name</label><br>
-      <input type="animation-name" id="animation-name" name="animation-name" value="" onkeyup="setAnimationName(this.value)" /><br>
-      <label for="element-color">Font Color</label><br>
-      <input type="element-color" id="element-color" name="element-color" value="" onkeyup="setElementColor(this.value)" /><br>
-      <input type="reset"/>
-    </form>
-    <button onclick="createNewElement()">Create New Element</button>
-    <section id="element-collector"></section>
-  </main>  
+      <form>
+
+        <label>
+            Animation Name
+        </label>
+        <input name="animate" type="text" value="" onkeyup="storeAnimationName(this.value)">
+
+        <label>
+          Color
+        </label>
+        <input name="color" type="text" value="" onkeyup="storeColor(this.value)">
+
+        <button onclick="createElement" >
+          Submit
+        </button>
+
+      </form>
+      <div id="elementContainer">
+
+      </div>
+  </main>
+
   <marquee>
     bounce	flash	pulse	rubberBand
     shake	headShake	swing	tada
